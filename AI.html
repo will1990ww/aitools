@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimization -->
+    <title>AI 网址导航 - 精选热门人工智能工具目录</title>
+    <meta name="description" content="AI 网址导航为您精选了最热门、最实用的 AI 工具，涵盖写作、对话、图像生成、视频制作、编程等多个领域，助您高效工作与创作。">
+    <meta name="keywords" content="AI, 人工智能, AI工具, AI网址, AI网址导航, AI目录, ChatGPT, Gemini, Midjourney, AI写作, AI图像, AI视频, AI编程, AI工具大全">
+    
+    <!-- Open Graph (for social media sharing) -->
+    <meta property="og:title" content="AI 网址导航 - 精选热门人工智能工具目录">
+    <meta property="og:description" content="一个涵盖写作、图像、视频、编程等多个领域的精选 AI 工具目录，助你高效工作与创作。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-website-url.com">
+    <meta property="og:image" content="https://placehold.co/1200x630/4f46e5/ffffff?text=AI+Tools+Directory">
+
+    <!-- Tailwind CSS and custom styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .ai-card {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            min-height: 250px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .ai-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .btn-visit {
+            margin-top: auto;
+            align-self: flex-start;
+            padding: 0.5rem 1rem;
+            background-color: #4f46e5;
+            color: white;
+            font-weight: 600;
+            border-radius: 9999px;
+            transition: background-color 0.2s;
+        }
+        .btn-visit:hover {
+            background-color: #4338ca;
+        }
+        .filter-buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .filter-button {
+            transition: background-color 0.2s, color 0.2s;
+        }
+        @media (max-width: 640px) {
+            .filter-buttons-container {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container">
+        <header class="text-center mb-10">
+            <h1 id="main-title" class="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">AI 网址导航</h1>
+            <p id="subtitle" class="text-gray-500">精选AI工具，助您一臂之力</p>
+        </header>
+
+        <!-- Search and filter section -->
+        <div class="mb-8 flex flex-col items-center justify-center gap-4">
+            <input type="text" id="search-input" placeholder="搜索工具、描述或关键词..." class="w-full sm:w-1/2 p-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <div class="filter-buttons-container">
+                <button id="filter-all" class="filter-button px-4 py-2 rounded-full font-medium text-white bg-indigo-500 hover:bg-indigo-600 transition-colors" data-category="All">全部</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Writing">写作</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Chat">对话</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Summarization">总结</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Image Generation">图像生成</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Image Editing">图像编辑</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Video Generation">视频生成</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Video Editing">视频编辑</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Audio Generation">音频生成</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Audio Editing">音频编辑</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Programming">编程</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="3D">3D</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Document Assistant">文档助手</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Meeting Tools">会议工具</button>
+                <button class="filter-button px-4 py-2 rounded-full font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors" data-category="Design">设计</button>
+            </div>
+        </div>
+
+        <!-- AI Tool Cards Grid -->
+        <div id="ai-cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards will be injected here by JavaScript -->
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = navigator.language || navigator.userLanguage;
+            const isChinese = lang.toLowerCase().startsWith('zh');
+            const tools_zh = [
+                {
+                    name: 'ChatGPT',
+                    description: '由OpenAI开发的大型语言模型。',
+                    strengths: '强大的通用对话、文本生成、代码辅助、创意写作等。',
+                    category: ['对话', '写作', '编程'],
+                    keywords: ['聊天', '对话', '问答', '写文章', '写代码', '论文', '报告', '文本'],
+                    url: 'https://chat.openai.com'
+                },
+                {
+                    name: 'Gemini',
+                    description: 'Google旗下的多模态人工智能。',
+                    strengths: '整合了Google搜索的实时信息，擅长进行数据分析、总结和实时信息查询，具备强大的多模态能力。',
+                    category: ['对话', '总结', '编程', '图像生成'],
+                    keywords: ['聊天', '对话', '问答', '数据', '图表', '总结', '分析', '文本', '图像', '图片', '照片'],
+                    url: 'https://gemini.google.com'
+                },
+                {
+                    name: 'Midjourney',
+                    description: '一个独立的AI图像生成器。',
+                    strengths: '艺术风格独特，图像质量极高，特别适合生成艺术作品和概念图。',
+                    category: ['图像生成'],
+                    keywords: ['图像', '图片', '照片', '画画', '美术', '设计'],
+                    url: 'https://www.midjourney.com'
+                },
+                {
+                    name: 'DALL-E 3',
+                    description: 'OpenAI的文本到图像模型。',
+                    strengths: '能理解并精确呈现复杂的自然语言描述，与ChatGPT深度集成。',
+                    category: ['图像生成'],
+                    keywords: ['图像', '图片', '照片', '设计'],
+                    url: 'https://openai.com/dall-e-3'
+                },
+                {
+                    name: 'RunwayML',
+                    description: '一个集成了多种AI工具的创意平台。',
+                    strengths: '功能强大，能进行视频生成、图像处理、音频编辑等，适合电影制作和视觉艺术。',
+                    category: ['视频生成', '视频编辑', '图像编辑'],
+                    keywords: ['视频', '图像', '图片', '照片', '音频', '音乐', '剪辑'],
+                    url: 'https://runwayml.com'
+                },
+                {
+                    name: 'Stable Diffusion',
+                    description: '一个开源的深度学习文本到图像模型。',
+                    strengths: '高度可定制，用户可以根据自己的需求进行模型微调，生成风格多样。',
+                    category: ['图像生成'],
+                    keywords: ['图像', '图片', '照片', '开源', '设计'],
+                    url: 'https://stablediffusionweb.com'
+                },
+                {
+                    name: 'Claude',
+                    description: '由Anthropic公司开发的大型语言模型。',
+                    strengths: '在处理长篇文档和复杂对话方面表现出色，擅长进行伦理和安全方面的对话。',
+                    category: ['写作', '对话', '总结'],
+                    keywords: ['聊天', '对话', '问答', '文档', 'PDF', 'Word', 'PPT', '文本'],
+                    url: 'https://www.anthropic.com/index/claude'
+                },
+                {
+                    name: 'Llama 3',
+                    description: '由Meta开发的开源语言模型。',
+                    strengths: '模型开源且性能强大，是开发者和研究者构建自定义AI应用的理想选择。',
+                    category: ['对话', '编程'],
+                    keywords: ['聊天', '对话', '写代码', '开源'],
+                    url: 'https://llama.meta.com'
+                },
+                {
+                    name: 'GitHub Copilot',
+                    description: '由GitHub和OpenAI开发的AI代码助手。',
+                    strengths: '能够根据代码上下文自动补全代码，提高编程效率，支持多种编程语言。',
+                    category: ['编程'],
+                    keywords: ['代码', '编程', '写代码', '开发', '程序员'],
+                    url: 'https://github.com/features/copilot'
+                },
+                {
+                    name: 'ElevenLabs',
+                    description: '专业的AI语音生成和语音克隆平台。',
+                    strengths: '语音音色自然，支持多种情感和语调，适合用于播客、有声读物和视频配音。',
+                    category: ['音频生成'],
+                    keywords: ['音频', '声音', '音乐', '配音', '播客', '克隆'],
+                    url: 'https://elevenlabs.io'
+                },
+                {
+                    name: 'Perplexity AI',
+                    description: '一款以提供精确答案和引用来源为特点的AI搜索引擎。',
+                    strengths: '擅长进行实时信息查询和研究，能提供详细的答案来源，杜绝虚假信息。',
+                    category: ['对话', '总结', '编程'],
+                    keywords: ['搜索', '问答', '聊天', '研究', '代码', '编程'],
+                    url: 'https://www.perplexity.ai'
+                },
+                {
+                    name: 'HeyGen',
+                    description: '一款AI视频生成工具，能通过照片生成视频。',
+                    strengths: '快速创建虚拟主播和企业宣传视频，支持多种语言和风格。',
+                    category: ['视频生成'],
+                    keywords: ['视频', '生成', '照片', '虚拟人'],
+                    url: 'https://www.heygen.com'
+                },
+                {
+                    name: 'Grok',
+                    description: '由xAI开发的对话式人工智能。',
+                    strengths: '以其独特的幽默感和对时事及争议话题的直接回答而闻名。',
+                    category: ['对话', '编程'],
+                    keywords: ['聊天', '问答', '写代码'],
+                    url: 'https://x.ai/grok'
+                },
+                {
+                    name: 'Notion AI',
+                    description: '集成在Notion笔记应用中的AI助手。',
+                    strengths: '能帮助用户自动生成、总结、翻译和优化文本，提高工作流效率。',
+                    category: ['文档助手', '写作', '总结'],
+                    keywords: ['文档', 'PDF', 'Word', 'PPT', '文本', '笔记', '写文章', '翻译'],
+                    url: 'https://www.notion.so/ai'
+                },
+                {
+                    name: 'Suno AI',
+                    description: '一个通过文字描述生成音乐和歌曲的AI工具。',
+                    strengths: '能快速生成完整的音乐作品，包括歌词和旋律，音乐风格多样。',
+                    category: ['音频生成'],
+                    keywords: ['音频', '音乐', '歌曲', '作词', '作曲'],
+                    url: 'https://www.suno.ai'
+                },
+                {
+                    name: 'Luma AI',
+                    description: '一个专注于3D模型和场景生成的AI平台。',
+                    strengths: '能通过简单的提示或图片生成高质量的3D模型，广泛应用于游戏和设计领域。',
+                    category: ['3D'],
+                    keywords: ['3D', '三维', '模型', '游戏', '设计'],
+                    url: 'https://lumalabs.ai'
+                },
+                {
+                    name: 'Leonardo.Ai',
+                    description: '一款专注于游戏资产和概念艺术的AI图像生成器。',
+                    strengths: '提供高度定制化的模型，适合生成游戏中的角色、物品和场景。',
+                    category: ['图像生成', '3D'],
+                    keywords: ['图像', '图片', '设计', '游戏', '三维', '3D'],
+                    url: 'https://leonardo.ai'
+                },
+                {
+                    name: 'Pika',
+                    description: '一个功能强大的文本到视频生成工具。',
+                    strengths: '能根据文字提示或图像生成高质量的短视频，支持各种风格和动态效果。',
+                    category: ['视频生成'],
+                    keywords: ['视频', '生成', '动图', '动画'],
+                    url: 'https://pika.art'
+                },
+                {
+                    name: 'Gamma',
+                    description: '一款AI驱动的演示文稿、文档和网页创建工具。',
+                    strengths: '快速将文本转化为精美的演示文稿或网页，支持智能排版和设计。',
+                    category: ['文档助手', '设计'],
+                    keywords: ['文档', 'PPT', '演示', '报告', '网页'],
+                    url: 'https://gamma.app'
+                },
+                {
+                    name: 'Fireflies.ai',
+                    description: 'AI驱动的会议助手。',
+                    strengths: '能自动记录、转录和总结会议内容，并识别关键行动点。',
+                    category: ['会议工具', '总结'],
+                    keywords: ['会议', '录音', '纪要', '总结', '转录'],
+                    url: 'https://fireflies.ai'
+                },
+                {
+                    name: 'DeepL Translate',
+                    description: '基于神经网络的在线机器翻译服务。',
+                    strengths: '翻译自然流畅，尤其擅长处理长篇文本，提供高质量的多语言翻译。',
+                    category: ['总结'],
+                    keywords: ['翻译', '文档', '文本'],
+                    url: 'https://www.deepl.com/translator'
+                },
+                {
+                    name: 'Phind',
+                    description: '专为开发者打造的AI搜索引擎。',
+                    strengths: '擅长回答编程问题和提供代码示例，搜索结果更精准，省去开发者查阅文档的时间。',
+                    category: ['编程'],
+                    keywords: ['代码', '编程', '开发', '程序员', '搜索'],
+                    url: 'https://www.phind.com'
+                },
+                {
+                    name: 'Udio',
+                    description: '一个通过文字描述生成逼真歌曲的AI工具。',
+                    strengths: '专注于生成高品质、具有人声和多种乐器编排的歌曲，尤其擅长流行音乐。',
+                    category: ['音频生成'],
+                    keywords: ['音频', '音乐', '歌曲', '作曲'],
+                    url: 'https://www.udio.com'
+                },
+                {
+                    name: 'Adobe Firefly',
+                    description: 'Adobe Creative Cloud中的AI图像生成模型。',
+                    strengths: '与Adobe生态系统无缝集成，能生成高质量的图像和文本效果，特别适合专业设计师。',
+                    category: ['图像生成', '图像编辑'],
+                    keywords: ['图像', '图片', '照片', '设计', 'PS', '修图'],
+                    url: 'https://www.adobe.com/sensei/generative-ai/firefly.html'
+                },
+                {
+                    name: 'Copilot',
+                    description: '微软提供的AI助手，集成于Windows和Office。',
+                    strengths: '能辅助进行文档写作、数据分析和演示文稿制作，极大地提升办公效率。',
+                    category: ['文档助手', '写作'],
+                    keywords: ['文档', 'PDF', 'Word', 'PPT', 'Excel', '文本', '写文章', '数据', '分析'],
+                    url: 'https://www.microsoft.com/en-us/microsoft-365/copilot'
+                },
+                {
+                    name: 'Sora',
+                    description: 'OpenAI的文本到视频生成模型。',
+                    strengths: '能根据文字描述生成长达一分钟的逼真、高质量视频。',
+                    category: ['视频生成'],
+                    keywords: ['视频', '生成', '短片', '电影'],
+                    url: 'https://openai.com/sora'
+                },
+                {
+                    name: 'Krea.ai',
+                    description: '一个AI创意工作流平台。',
+                    strengths: '专注于实时图像和视频生成，提供直观的界面，能快速生成创意。',
+                    category: ['图像生成', '视频生成'],
+                    keywords: ['图像', '图片', '视频', '创意'],
+                    url: 'https://www.krea.ai'
+                },
+                {
+                    name: 'Ideogram',
+                    description: '专注于文本渲染的AI图像生成器。',
+                    strengths: '擅长在图像中准确地生成和排版文字，解决了许多AI工具的常见痛点。',
+                    category: ['图像生成'],
+                    keywords: ['图像', '图片', '文本', '文字'],
+                    url: 'https://ideogram.ai'
+                },
+                {
+                    name: 'Murf AI',
+                    description: '一款AI驱动的文本到语音转换工具。',
+                    strengths: '提供多种高质量的AI语音和丰富的编辑功能，适用于制作演示文稿和广告配音。',
+                    category: ['音频生成', '音频编辑'],
+                    keywords: ['音频', '声音', '配音', '播客', '有声书'],
+                    url: 'https://murf.ai'
+                },
+                {
+                    name: 'Synthesia',
+                    description: 'AI视频生成平台。',
+                    strengths: '能生成逼真的虚拟人像，用于制作培训视频、宣传片和在线课程。',
+                    category: ['视频生成'],
+                    keywords: ['视频', '虚拟人', '培训', '课程'],
+                    url: 'https://www.synthesia.io'
+                },
+                {
+                    name: 'Uizard',
+                    description: '一款AI驱动的UI/UX设计工具。',
+                    strengths: '能将手绘草图或文本描述转化为可编辑的数字界面设计。',
+                    category: ['设计'],
+                    keywords: ['设计', 'UI', 'UX', '界面', '原型'],
+                    url: 'https://uizard.io'
+                },
+                {
+                    name: 'Descript',
+                    description: '集录音、转录和视频编辑于一体的AI工具。',
+                    strengths: '能像编辑文本一样编辑音频和视频，大幅提高内容创作效率。',
+                    category: ['视频编辑', '音频编辑'],
+                    keywords: ['视频', '音频', '剪辑', '转录', '配音'],
+                    url: 'https://www.descript.com'
+                },
+                {
+                    name: 'Hugging Face',
+                    description: '一个专注于AI模型和数据集的开源社区。',
+                    strengths: '开发者和研究者寻找、分享和部署AI模型的首选平台，提供了强大的工具。',
+                    category: ['编程'],
+                    keywords: ['代码', '编程', '开源', '模型', '开发'],
+                    url: 'https://huggingface.co'
+                },
+                {
+                    name: 'Tome',
+                    description: 'AI驱动的演示文稿生成工具。',
+                    strengths: '能快速根据文字提示创建有吸引力的、多媒体的演示文稿。',
+                    category: ['文档助手', '设计'],
+                    keywords: ['文档', 'PPT', '演示', '报告'],
+                    url: 'https://tome.app'
+                },
+                {
+                    name: 'Jasper',
+                    description: '一款专业的AI内容生成工具。',
+                    strengths: '专注于为营销人员和创作者生成高质量的博客文章、广告文案和社交媒体内容。',
+                    category: ['写作'],
+                    keywords: ['写文章', '博客', '文案', '营销'],
+                    url: 'https://www.jasper.ai'
+                },
+                {
+                    name: 'Codeium',
+                    description: '一款AI代码自动补全和生成工具。',
+                    strengths: '提供快速、精准的代码补全功能，支持多种编程语言和IDE。',
+                    category: ['编程'],
+                    keywords: ['代码', '编程', '开发'],
+                    url: 'https://www.codeium.com'
+                },
+                {
+                    name: 'Figma AI (FigJam AI)',
+                    description: '集成在Figma协作白板中的AI功能。',
+                    strengths: '能快速生成创意、组织思路，并自动总结讨论内容，提升团队协作效率。',
+                    category: ['设计', '总结', '会议工具'],
+                    keywords: ['设计', 'UI', 'UX', '会议', '总结'],
+                    url: 'https://www.figma.com/figjam/ai'
+                },
+                {
+                    name: 'Beautiful.ai',
+                    description: 'AI驱动的智能演示文稿设计工具。',
+                    strengths: '能自动应用设计规则，帮助用户快速创建美观专业的幻灯片。',
+                    category: ['设计', '文档助手'],
+                    keywords: ['设计', 'PPT', '演示', '文档'],
+                    url: 'https://www.beautiful.ai'
+                },
+                {
+                    name: 'Grammarly',
+                    description: 'AI写作助手，用于语法检查和风格优化。',
+                    strengths: '能实时纠正语法错误，提供写作建议，并调整写作语气。',
+                    category: ['写作', '文档助手'],
+                    keywords: ['写文章', '文档', '论文', '语法', '文本'],
+                    url: 'https://www.grammarly.com'
+                },
+                {
+                    name: 'Otter.ai',
+                    description: 'AI语音转录和会议纪要工具。',
+                    strengths: '能实时转录会议内容，并自动生成摘要和行动项。',
+                    category: ['会议工具', '总结'],
+                    keywords: ['会议', '纪要', '转录', '录音', '总结'],
+                    url: 'https://otter.ai'
+                },
+                {
+                    name: 'Kaiber',
+                    description: '文本到视频的AI生成工具。',
+                    strengths: '专注于生成具有独特艺术风格的短视频，适合音乐视频和创意内容。',
+                    category: ['视频生成'],
+                    keywords: ['视频', '生成', '短片'],
+                    url: 'https://kaiber.ai'
+                },
+                {
+                    name: 'Gen-1 by RunwayML',
+                    description: '将图像或文字转化为视频的AI模型。',
+                    strengths: '能根据图片和文字提示，为静态图像赋予动态效果。',
+                    category: ['视频生成'],
+                    keywords: ['视频', '图像', '图片', '生成'],
+                    url: 'https://runwayml.com/ai-magic-tools/gen-1'
+                },
+                {
+                    name: 'Lovo',
+                    description: 'AI语音和视频生成平台。',
+                    strengths: '提供大量逼真的AI声音，并能生成虚拟人像视频。',
+                    category: ['音频生成', '视频生成'],
+                    keywords: ['音频', '声音', '视频', '虚拟人', '生成'],
+                    url: 'https://lovo.ai'
+                },
+                {
+                    name: 'Replika',
+                    description: '一款AI伴侣聊天机器人。',
+                    strengths: '专注于提供情感支持和个性化对话体验，能记住与用户的互动历史。',
+                    category: ['对话'],
+                    keywords: ['聊天', '对话', '机器人', '伴侣'],
+                    url: 'https://replika.ai'
+                },
+                {
+                    name: 'Looka',
+                    description: 'AI驱动的品牌设计平台。',
+                    strengths: '能根据用户偏好和行业信息，自动生成多种Logo设计方案。',
+                    category: ['设计'],
+                    keywords: ['设计', 'Logo', '品牌'],
+                    url: 'https://looka.com'
+                },
+                {
+                    name: 'Soundraw',
+                    description: 'AI音乐生成器。',
+                    strengths: '能根据用户的偏好（如流派、情绪和乐器），自动创作独特的音乐。',
+                    category: ['音频生成'],
+                    keywords: ['音频', '音乐', '作曲'],
+                    url: 'https://soundraw.io'
+                },
+                {
+                    name: 'Mubert',
+                    description: 'AI音乐流媒体服务。',
+                    strengths: '能根据用户的需求（如冥想、工作、运动），实时生成无限循环的背景音乐。',
+                    category: ['音频生成'],
+                    keywords: ['音频', '音乐', '背景音乐'],
+                    url: 'https://mubert.com'
+                },
+                {
+                    name: 'Jukebox by OpenAI',
+                    description: 'OpenAI的音乐生成模型。',
+                    strengths: '能根据流派、艺术家和歌词等提示，生成包含人声的歌曲。',
+                    category: ['音频生成'],
+                    keywords: ['音频', '音乐', '歌曲'],
+                    url: 'https://openai.com/blog/jukebox'
+                },
+                {
+                    name: 'Playground AI',
+                    description: '一款免费的在线AI图像生成工具。',
+                    strengths: '界面友好，提供多种风格和模型，适合初学者快速上手。',
+                    category: ['图像生成'],
+                    keywords: ['图像', '图片', '照片', '免费'],
+                    url: 'https://playgroundai.com'
+                },
+                {
+                    name: 'DeepMotion',
+                    description: 'AI动作捕捉和动画生成平台。',
+                    strengths: '能通过视频自动为3D角色生成逼真的动画。',
+                    category: ['视频生成', '3D'],
+                    keywords: ['视频', '动画', '3D', '动作'],
+                    url: 'https://www.deepmotion.com'
+                },
+                {
+                    name: 'Fotor AI',
+                    description: '在线图像编辑和AI生成工具。',
+                    strengths: '集成了多种AI功能，如图像修复、抠图和风格转换，操作简单。',
+                    category: ['图像生成', '图像编辑'],
+                    keywords: ['图像', '图片', '照片', '编辑', '修图'],
+                    url: 'https://www.fotor.com/features/ai-image-generator'
+                }
+            ];
+
+            const tools_en = [
+                {
+                    name: 'ChatGPT',
+                    description: 'A large language model developed by OpenAI.',
+                    strengths: 'Powerful for general conversation, text generation, code assistance, and creative writing.',
+                    category: ['Writing', 'Chat', 'Programming'],
+                    keywords: ['chatbot', 'conversation', 'text', 'writing', 'code', 'essay'],
+                    url: 'https://chat.openai.com'
+                },
+                {
+                    name: 'Gemini',
+                    description: 'Google\'s multimodal AI.',
+                    strengths: 'Integrates real-time information from Google Search, excels at data analysis, summarization, and possesses powerful multimodal capabilities.',
+                    category: ['Chat', 'Summarization', 'Programming', 'Image Generation'],
+                    keywords: ['chatbot', 'data', 'analysis', 'summary', 'text', 'image', 'photo', 'excel'],
+                    url: 'https://gemini.google.com'
+                },
+                {
+                    name: 'Midjourney',
+                    description: 'An independent AI image generator.',
+                    strengths: 'Unique artistic style and extremely high image quality, perfect for generating art and conceptual images.',
+                    category: ['Image Generation'],
+                    keywords: ['image', 'photo', 'art', 'design'],
+                    url: 'https://www.midjourney.com'
+                },
+                {
+                    name: 'DALL-E 3',
+                    description: 'OpenAI\'s text-to-image model.',
+                    strengths: 'Accurately understands and renders complex natural language descriptions, deeply integrated with ChatGPT.',
+                    category: ['Image Generation'],
+                    keywords: ['image', 'photo', 'design'],
+                    url: 'https://openai.com/dall-e-3'
+                },
+                {
+                    name: 'RunwayML',
+                    description: 'A creative platform with a variety of integrated AI tools.',
+                    strengths: 'Powerful features for video generation, image processing, and audio editing, suitable for filmmaking and visual arts.',
+                    category: ['Video Generation', 'Video Editing', 'Image Editing'],
+                    keywords: ['video', 'image', 'photo', 'audio', 'music', 'editing'],
+                    url: 'https://runwayml.com'
+                },
+                {
+                    name: 'Stable Diffusion',
+                    description: 'An open-source deep learning text-to-image model.',
+                    strengths: 'Highly customizable, allowing users to fine-tune the model for diverse styles.',
+                    category: ['Image Generation'],
+                    keywords: ['image', 'photo', 'design', 'open-source'],
+                    url: 'https://stablediffusionweb.com'
+                },
+                {
+                    name: 'Claude',
+                    description: 'A large language model developed by Anthropic.',
+                    strengths: 'Excels at handling long documents and complex conversations, and is strong in ethical and safety-related dialogues.',
+                    category: ['Writing', 'Chat', 'Summarization'],
+                    keywords: ['chat', 'dialogue', 'document', 'PDF', 'Word', 'text'],
+                    url: 'https://www.anthropic.com/index/claude'
+                },
+                {
+                    name: 'Llama 3',
+                    description: 'An open-source language model developed by Meta.',
+                    strengths: 'Powerful and open-source, an ideal choice for developers and researchers building custom AI applications.',
+                    category: ['对话', '编程'],
+                    keywords: ['chat', 'code', 'programming', 'open-source'],
+                    url: 'https://llama.meta.com'
+                },
+                {
+                    name: 'GitHub Copilot',
+                    description: 'An AI code assistant developed by GitHub and OpenAI.',
+                    strengths: 'Automatically completes code based on context, improving programming efficiency and supporting multiple languages.',
+                    category: ['Programming'],
+                    keywords: ['code', 'programming', 'developer', 'coding'],
+                    url: 'https://github.com/features/copilot'
+                },
+                {
+                    name: 'ElevenLabs',
+                    description: 'A professional AI voice generation and cloning platform.',
+                    strengths: 'Natural-sounding voices that support a range of emotions and tones, suitable for podcasts, audiobooks, and video dubbing.',
+                    category: ['Audio Generation'],
+                    keywords: ['audio', 'voice', 'sound', 'music', 'podcast'],
+                    url: 'https://elevenlabs.io'
+                },
+                {
+                    name: 'Perplexity AI',
+                    description: 'An AI search engine known for providing accurate answers with cited sources.',
+                    strengths: 'Excels at real-time information retrieval and research, providing detailed sources to prevent misinformation.',
+                    category: ['Chat', 'Summarization', 'Programming'],
+                    keywords: ['search', 'question', 'answer', 'research', 'code'],
+                    url: 'https://www.perplexity.ai'
+                },
+                {
+                    name: 'HeyGen',
+                    description: 'An AI video generation tool that can create videos from photos.',
+                    strengths: 'Quickly creates virtual hosts and corporate videos, supporting various languages and styles.',
+                    category: ['Video Generation'],
+                    keywords: ['video', 'generation', 'photo', 'virtual human'],
+                    url: 'https://www.heygen.com'
+                },
+                {
+                    name: 'Grok',
+                    description: 'A conversational AI developed by xAI.',
+                    strengths: 'Known for its unique sense of humor and direct answers to current events and controversial topics.',
+                    category: ['Chat', 'Programming'],
+                    keywords: ['chat', 'question', 'answer', 'code'],
+                    url: 'https://x.ai/grok'
+                },
+                {
+                    name: 'Notion AI',
+                    description: 'An AI assistant integrated into the Notion note-taking app.',
+                    strengths: 'Helps users automatically generate, summarize, translate, and optimize text, improving workflow efficiency.',
+                    category: ['Document Assistant', 'Writing', 'Summarization'],
+                    keywords: ['document', 'PDF', 'Word', 'PPT', 'text', 'writing', 'note'],
+                    url: 'https://www.notion.so/ai'
+                },
+                {
+                    name: 'Suno AI',
+                    description: 'An AI tool that generates music and songs from text descriptions.',
+                    strengths: 'Can quickly generate complete musical works, including lyrics and melodies, in diverse styles.',
+                    category: ['Audio Generation'],
+                    keywords: ['audio', 'music', 'song', 'lyrics'],
+                    url: 'https://www.suno.ai'
+                },
+                {
+                    name: 'Luma AI',
+                    description: 'An AI platform focused on 3D model and scene generation.',
+                    strengths: 'Can generate high-quality 3D models from simple prompts or images, widely used in gaming and design.',
+                    category: ['3D'],
+                    keywords: ['3D', 'three-dimensional', 'model', 'gaming', 'design'],
+                    url: 'https://lumalabs.ai'
+                },
+                {
+                    name: 'Leonardo.Ai',
+                    description: 'An AI image generator focused on game assets and concept art.',
+                    strengths: 'Provides highly customizable models suitable for generating in-game characters, items, and environments.',
+                    category: ['Image Generation', '3D'],
+                    keywords: ['image', 'photo', 'design', 'gaming', '3D'],
+                    url: 'https://leonardo.ai'
+                },
+                {
+                    name: 'Pika',
+                    description: 'A powerful text-to-video generation tool.',
+                    strengths: 'Generates high-quality short videos from text prompts or images, supporting various styles and dynamic effects.',
+                    category: ['Video Generation'],
+                    keywords: ['video', 'generation', 'animation'],
+                    url: 'https://pika.art'
+                },
+                {
+                    name: 'Gamma',
+                    description: 'An AI-driven presentation, document, and web page creation tool.',
+                    strengths: 'Quickly transforms text into beautiful presentations or web pages with smart formatting and design.',
+                    category: ['Document Assistant', 'Design'],
+                    keywords: ['document', 'PPT', 'presentation', 'report', 'webpage'],
+                    url: 'https://gamma.app'
+                },
+                {
+                    name: 'Fireflies.ai',
+                    description: 'An AI-powered meeting assistant.',
+                    strengths: 'Automatically records, transcribes, and summarizes meeting content, and identifies key action items.',
+                    category: ['Meeting Tools', 'Summarization'],
+                    keywords: ['meeting', 'summary', 'transcription', 'minutes'],
+                    url: 'https://fireflies.ai'
+                },
+                {
+                    name: 'DeepL Translate',
+                    description: 'An online machine translation service based on neural networks.',
+                    strengths: 'Fluent and natural translations, especially for long-form text, providing high-quality multilingual translation.',
+                    category: ['Summarization'],
+                    keywords: ['translation', 'text', 'document'],
+                    url: 'https://www.deepl.com/translator'
+                },
+                {
+                    name: 'Phind',
+                    description: 'An AI search engine built for developers.',
+                    strengths: 'Excels at answering programming questions and providing code examples, with more precise search results that save developers time.',
+                    category: ['Programming'],
+                    keywords: ['code', 'programming', 'developer', 'search'],
+                    url: 'https://www.phind.com'
+                },
+                {
+                    name: 'Udio',
+                    description: 'An AI tool that generates realistic songs from text descriptions.',
+                    strengths: 'Focuses on generating high-quality songs with human vocals and diverse instrument arrangements, especially for pop music.',
+                    category: ['Audio Generation'],
+                    keywords: ['audio', 'music', 'song'],
+                    url: 'https://www.udio.com'
+                },
+                {
+                    name: 'Adobe Firefly',
+                    description: 'The AI image generation model within Adobe Creative Cloud.',
+                    strengths: 'Seamlessly integrates with the Adobe ecosystem, generating high-quality images and text effects, ideal for professional designers.',
+                    category: ['Image Generation', 'Image Editing'],
+                    keywords: ['image', 'photo', 'design', 'Photoshop', 'editing'],
+                    url: 'https://www.adobe.com/sensei/generative-ai/firefly.html'
+                },
+                {
+                    name: 'Copilot',
+                    description: 'An AI assistant from Microsoft, integrated into Windows and Office.',
+                    strengths: 'Assists with document writing, data analysis, and presentation creation, greatly boosting office productivity.',
+                    category: ['Document Assistant', 'Writing'],
+                    keywords: ['document', 'PDF', 'Word', 'PPT', 'Excel', 'writing', 'data', 'analysis'],
+                    url: 'https://www.microsoft.com/en-us/microsoft-365/copilot'
+                },
+                {
+                    name: 'Sora',
+                    description: 'OpenAI\'s text-to-video generation model.',
+                    strengths: 'Can generate realistic, high-quality videos up to a minute long from text descriptions.',
+                    category: ['Video Generation'],
+                    keywords: ['video', 'generation', 'film', 'movie'],
+                    url: 'https://openai.com/sora'
+                },
+                {
+                    name: 'Krea.ai',
+                    description: 'An AI creative workflow platform.',
+                    strengths: 'Focused on real-time image and video generation, offering an intuitive interface to quickly create concepts.',
+                    category: ['Image Generation', 'Video Generation'],
+                    keywords: ['image', 'photo', 'video', 'creative'],
+                    url: 'https://www.krea.ai'
+                },
+                {
+                    name: 'Ideogram',
+                    description: 'An AI image generator focused on text rendering.',
+                    strengths: 'Excels at accurately generating and typesetting text within images, solving a common pain point of many AI tools.',
+                    category: ['Image Generation'],
+                    keywords: ['image', 'photo', 'text', 'words'],
+                    url: 'https://ideogram.ai'
+                },
+                {
+                    name: 'Murf AI',
+                    description: 'An AI-powered text-to-speech conversion tool.',
+                    strengths: 'Provides multiple high-quality AI voices and extensive editing features, suitable for creating presentations and ad voiceovers.',
+                    category: ['Audio Generation', 'Audio Editing'],
+                    keywords: ['audio', 'voice', 'sound', 'podcast', 'audiobook'],
+                    url: 'https://murf.ai'
+                },
+                {
+                    name: 'Synthesia',
+                    description: 'An AI video generation platform.',
+                    strengths: 'Generates realistic virtual human avatars for creating training videos, promotional content, and online courses.',
+                    category: ['Video Generation'],
+                    keywords: ['video', 'virtual human', 'training', 'course'],
+                    url: 'https://www.synthesia.io'
+                },
+                {
+                    name: 'Uizard',
+                    description: 'An AI-driven UI/UX design tool.',
+                    strengths: 'Transforms hand-drawn sketches or text descriptions into editable digital interface designs.',
+                    category: ['Design'],
+                    keywords: ['design', 'UI', 'UX', 'interface', 'prototype'],
+                    url: 'https://uizard.io'
+                },
+                {
+                    name: 'Descript',
+                    description: 'An all-in-one AI tool for recording, transcribing, and video editing.',
+                    strengths: 'Allows editing audio and video like text, significantly boosting content creation efficiency.',
+                    category: ['Video Editing', 'Audio Editing'],
+                    keywords: ['video', 'audio', 'editing', 'transcription'],
+                    url: 'https://www.descript.com'
+                },
+                {
+                    name: 'Hugging Face',
+                    description: 'An open-source community for AI models and datasets.',
+                    strengths: 'The go-to platform for developers and researchers to find, share, and deploy AI models, offering powerful tools.',
+                    category: ['Programming'],
+                    keywords: ['code', 'programming', 'open-source', 'models', 'developer'],
+                    url: 'https://huggingface.co'
+                },
+                {
+                    name: 'Tome',
+                    description: 'An AI-driven presentation generation tool.',
+                    strengths: 'Quickly creates attractive, multimedia presentations from text prompts.',
+                    category: ['Document Assistant', 'Design'],
+                    keywords: ['document', 'PPT', 'presentation', 'report'],
+                    url: 'https://tome.app'
+                },
+                {
+                    name: 'Jasper',
+                    description: 'A professional AI content generation tool.',
+                    strengths: 'Specializes in generating high-quality blog posts, ad copy, and social media content for marketers and creators.',
+                    category: ['Writing'],
+                    keywords: ['writing', 'blog', 'copywriting', 'marketing'],
+                    url: 'https://www.jasper.ai'
+                },
+                {
+                    name: 'Codeium',
+                    description: 'An AI code completion and generation tool.',
+                    strengths: 'Provides fast and accurate code completion, supporting multiple programming languages and IDEs.',
+                    category: ['Programming'],
+                    keywords: ['code', 'programming', 'developer'],
+                    url: 'https://www.codeium.com'
+                },
+                {
+                    name: 'Figma AI (FigJam AI)',
+                    description: 'AI features integrated into the Figma collaborative whiteboard.',
+                    strengths: 'Quickly generates ideas, organizes thoughts, and automatically summarizes discussions, enhancing team collaboration.',
+                    category: ['Design', 'Summarization', 'Meeting Tools'],
+                    keywords: ['design', 'UI', 'UX', 'meeting', 'summary'],
+                    url: 'https://www.figma.com/figjam/ai'
+                },
+                {
+                    name: 'Beautiful.ai',
+                    description: 'An AI-driven smart presentation design tool.',
+                    strengths: 'Automatically applies design rules to help users quickly create beautiful and professional slides.',
+                    category: ['Design', 'Document Assistant'],
+                    keywords: ['design', 'PPT', 'presentation', 'document'],
+                    url: 'https://www.beautiful.ai'
+                },
+                {
+                    name: 'Grammarly',
+                    description: 'An AI writing assistant for grammar checking and style optimization.',
+                    strengths: 'Corrects grammar errors in real time, provides writing suggestions, and adjusts writing tone.',
+                    category: ['Writing', 'Document Assistant'],
+                    keywords: ['writing', 'document', 'essay', 'grammar', 'text'],
+                    url: 'https://www.grammarly.com'
+                },
+                {
+                    name: 'Otter.ai',
+                    description: 'An AI voice transcription and meeting summary tool.',
+                    strengths: 'Real-time transcription of meeting content and automatic generation of summaries and action items.',
+                    category: ['Meeting Tools', 'Summarization'],
+                    keywords: ['meeting', 'minutes', 'transcription', 'audio', 'summary'],
+                    url: 'https://otter.ai'
+                },
+                {
+                    name: 'Kaiber',
+                    description: 'An AI text-to-video generation tool.',
+                    strengths: 'Focuses on generating short videos with a unique artistic style, suitable for music videos and creative content.',
+                    category: ['Video Generation'],
+                    keywords: ['video', 'generation', 'short-form'],
+                    url: 'https://kaiber.ai'
+                },
+                {
+                    name: 'Gen-1 by RunwayML',
+                    description: 'An AI model that transforms images or text into video.',
+                    strengths: 'Can add dynamic effects to static images based on pictures and text prompts.',
+                    category: ['Video Generation'],
+                    keywords: ['video', 'image', 'photo', 'generation'],
+                    url: 'https://runwayml.com/ai-magic-tools/gen-1'
+                },
+                {
+                    name: 'Lovo',
+                    description: 'An AI voice and video generation platform.',
+                    strengths: 'Offers a large selection of realistic AI voices and can generate virtual human videos.',
+                    category: ['Audio Generation', 'Video Generation'],
+                    keywords: ['audio', 'voice', 'video', 'virtual human', 'generation'],
+                    url: 'https://lovo.ai'
+                },
+                {
+                    name: 'Replika',
+                    description: 'An AI companion chatbot.',
+                    strengths: 'Focused on providing emotional support and a personalized conversational experience, remembering user interaction history.',
+                    category: ['Chat'],
+                    keywords: ['chat', 'chatbot', 'companion', 'AI friend'],
+                    url: 'https://replika.ai'
+                },
+                {
+                    name: 'Looka',
+                    description: 'An AI-powered brand design platform.',
+                    strengths: 'Automatically generates various logo design options based on user preferences and industry information.',
+                    category: ['Design'],
+                    keywords: ['design', 'Logo', 'brand'],
+                    url: 'https://looka.com'
+                },
+                {
+                    name: 'Soundraw',
+                    description: 'An AI music generator.',
+                    strengths: 'Automatically creates unique music based on user preferences like genre, mood, and instruments.',
+                    category: ['Audio Generation'],
+                    keywords: ['audio', 'music', 'composition'],
+                    url: 'https://soundraw.io'
+                },
+                {
+                    name: 'Mubert',
+                    description: 'An AI music streaming service.',
+                    strengths: 'Generates infinite background music in real time based on user needs (e.g., for meditation, work, or exercise).',
+                    category: ['Audio Generation'],
+                    keywords: ['audio', 'music', 'background'],
+                    url: 'https://mubert.com'
+                },
+                {
+                    name: 'Jukebox by OpenAI',
+                    description: 'OpenAI\'s music generation model.',
+                    strengths: 'Can generate songs with vocals based on prompts like genre, artist, and lyrics.',
+                    category: ['Audio Generation'],
+                    keywords: ['audio', 'music', 'song'],
+                    url: 'https://openai.com/blog/jukebox'
+                },
+                {
+                    name: 'Playground AI',
+                    description: 'A free online AI image generation tool.',
+                    strengths: 'User-friendly interface with various styles and models, great for beginners to get started quickly.',
+                    category: ['Image Generation'],
+                    keywords: ['image', 'photo', 'free'],
+                    url: 'https://playgroundai.com'
+                },
+                {
+                    name: 'DeepMotion',
+    description: 'An AI motion capture and animation generation platform.',
+                    strengths: 'Automatically generates realistic animations for 3D characters from video footage.',
+                    category: ['Video Generation', '3D'],
+                    keywords: ['video', 'animation', '3D', 'motion'],
+                    url: 'https://www.deepmotion.com'
+                },
+                {
+                    name: 'Fotor AI',
+                    description: 'An online image editing and AI generation tool.',
+                    strengths: 'Integrates various AI features like image repair, background removal, and style transfer, with simple operation.',
+                    category: ['Image Generation', 'Image Editing'],
+                    keywords: ['image', 'photo', 'editing', 'retouching'],
+                    url: 'https://www.fotor.com/features/ai-image-generator'
+                }
+            ];
+            
+            const categoryNames = {
+                'All': '全部',
+                'Writing': '写作',
+                'Chat': '对话',
+                'Summarization': '总结',
+                'Image Generation': '图像生成',
+                'Image Editing': '图像编辑',
+                'Video Generation': '视频生成',
+                'Video Editing': '视频编辑',
+                'Audio Generation': '音频生成',
+                'Audio Editing': '音频编辑',
+                'Programming': '编程',
+                '3D': '3D',
+                'Document Assistant': '文档助手',
+                'Meeting Tools': '会议工具',
+                'Design': '设计'
+            };
+            const aiCardsContainer = document.getElementById('ai-cards-container');
+            const searchInput = document.getElementById('search-input');
+            const filterButtons = document.querySelectorAll('button[data-category]');
+            const tools = isChinese ? tools_zh : tools_en;
+            const allTools = [...tools];
+            function renderTools(filteredTools) {
+                aiCardsContainer.innerHTML = '';
+                if (filteredTools.length === 0) {
+                    aiCardsContainer.innerHTML = `<p class="col-span-1 sm:col-span-2 lg:col-span-3 text-center text-gray-500">${isChinese ? '没有找到匹配的AI工具。' : 'No matching AI tools found.'}</p>`;
+                }
+                filteredTools.forEach(tool => {
+                    const card = document.createElement('div');
+                    card.classList.add('ai-card');
+                    const categoryTags = tool.category.map(cat => {
+                        const displayName = isChinese ? categoryNames[cat] : cat;
+                        return `<span class="inline-block bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full font-medium">${displayName}</span>`;
+                    }).join('');
+                    card.innerHTML = `
+                        <h2 class="text-2xl font-bold mb-2">${tool.name}</h2>
+                        <p class="text-gray-600 mb-4">${tool.description}</p>
+                        <div class="mb-2 flex flex-wrap gap-2">
+                            ${categoryTags}
+                        </div>
+                        <div class="mb-4">
+                            <span class="font-semibold text-gray-700">${isChinese ? '强项：' : 'Strengths:'}</span>
+                            <span class="text-sm text-gray-600">${tool.strengths}</span>
+                        </div>
+                        <a href="${tool.url}" target="_blank" class="btn-visit text-center">
+                            ${isChinese ? '打开链接' : 'Open Link'}
+                        </a>
+                    `;
+                    aiCardsContainer.appendChild(card);
+                });
+            }
+            function filterAndSearch() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const activeFilterButton = document.querySelector('[data-category].bg-indigo-500');
+                const filterCategory = activeFilterButton ? activeFilterButton.dataset.category : 'All';
+                const filteredTools = allTools.filter(tool => {
+                    const toolCategories = isChinese ? tool.category.map(c => categoryNames[c]) : tool.category;
+                    const toolSearchString = `${tool.name} ${tool.description} ${tool.strengths} ${toolCategories.join(' ')} ${tool.keywords.join(' ')}`.toLowerCase();
+                    const searchMatch = toolSearchString.includes(searchTerm);
+                    const categoryMatch = (filterCategory === 'All') || tool.category.includes(filterCategory);
+                    return searchMatch && categoryMatch;
+                });
+                renderTools(filteredTools);
+            }
+            function setActiveFilter(activeButton) {
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-indigo-500', 'text-white', 'hover:bg-indigo-600');
+                    btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300', 'hover:bg-gray-50');
+                });
+                activeButton.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300', 'hover:bg-gray-50');
+                activeButton.classList.add('bg-indigo-500', 'text-white', 'hover:bg-indigo-600');
+            }
+            document.getElementById('main-title').textContent = isChinese ? 'AI 网址导航' : 'AI Tools Directory';
+            document.getElementById('subtitle').textContent = isChinese ? '精选AI工具，助您一臂之力' : 'A curated list of AI tools to help you succeed';
+            searchInput.placeholder = isChinese ? '搜索工具、描述或关键词...' : 'Search for tools, descriptions or keywords...';
+            filterButtons.forEach(button => {
+                const category = button.getAttribute('data-category');
+                button.textContent = isChinese ? categoryNames[category] : category;
+            });
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    setActiveFilter(button);
+                    filterAndSearch();
+                });
+            });
+            searchInput.addEventListener('input', filterAndSearch);
+            renderTools(allTools);
+        });
+    </script>
+</body>
+</html>
